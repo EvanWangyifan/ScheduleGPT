@@ -1,0 +1,32 @@
+.grid-container {
+    display: grid;
+    position: absolute;
+    grid-template-columns: 45% 55%; 
+    grid-template-rows: 10% 80% 10%; 
+    width: 98vw;
+    height: 98vh;
+    justify-items: center;
+    align-items: center;
+}
+
+#title{
+    grid-row: 1 / span 1;
+    grid-column: 1 / span all;
+    /* margin: 1vh; */
+}
+
+#input-form{
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    
+}
+
+#calendar-preview{
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+}
+
+#chat-box{
+    grid-row: 3 / span 1;
+    grid-column: 1 / span all;
+}
