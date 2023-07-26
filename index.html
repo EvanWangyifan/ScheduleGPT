@@ -12,18 +12,43 @@
             <div class="grid-container">
                 <h1 id="title" class="grid-item">ScheduleGPT</h1>
                 <form class="form-group">
-                    <span class = "form-item"> Add Your Task: </span>
-                    <input type = "text" class = "form-item" placeholder = "task1" />
-                    <input type = "text" class = "form-item" placeholder = "task2" />
-                    <input type = "text" class = "form-item" placeholder = "task3" />
-                    <input type = "text" class = "form-item" placeholder = "task4" />
-                    <button class = "form-item"> Add </button>
-                    <button class = "form-item"> Generate </button>
-                </form>           
+                    <span> Add Your Task: </span>
+
+                    <div class = "form-item">
+                        <input type = "text" class = "task-item" placeholder = " eg. Workout 3 times this week" />
+                        <a><img class="remove-button" src="images/icons8-remove-26.png"></a>     
+                    </div>
+
+                    <div class = "form-item">
+                        <input type = "text" class = "task-item" placeholder = " eg. Meeting with Michael Tuesday 9am-10am" />
+                        <a><img class="remove-button" src="images/icons8-remove-26.png"></a>
+                    </div>
+                    
+                    <div class = "form-item">
+                        <input type = "text" class = "task-item" placeholder = " eg. Grocery shopping Friday after work" />
+                        <a><img class="remove-button" src="images/icons8-remove-26.png"></a>
+                    </div>
+                    
+                    <div class = "form-item">
+                        <input type = "text" class = "task-item" placeholder = " eg. Work on side project 8 hour this week" />
+                        <a><img class="remove-button" src="images/icons8-remove-26.png"></a>
+                    </div>
+                    
+                    <div class = "form-item">
+                        <input type = "text" class = "task-item" placeholder = " eg. Finish report before Thursday" />
+                        <a><img class="remove-button" src="images/icons8-remove-26.png"></a>                        
+                    </div>
+                    
+                    <img id="add-button" src="images/icons8-add-32.png">
+                    
+                </form>
+                <img id="launch-button" src="images/icons8-rocket-53.png">           
                 <div id="calendar-preview" class="grid-item">Calendar Preview Here</div>
                 <div id="chat-box" class="grid-item">
-                    <input type = "text" id = "chat-box-item" placeholder = "Describe any changes you want to make" />
-                    <img id='enter-button' src="images/icons8-enter-48.png">
+                    <input type = "text" id = "chat-box-text" placeholder = "Describe any changes you want to make" />
+                    <a>
+                        <img id='enter-button' src="images/icons8-enter-48.png">
+                    </a>
                 </div>
             </div>
         </main>
