@@ -2,5 +2,5 @@
 
 A conversational schedule generator based on GPT-4
 
-[![alt text](images/icons8-click-64.png)](https://evanwangyifan.github.io/ScheduleGPT/) 
+![Static Badge](https://img.shields.io/badge/link-Launch%20the%20Website-green)
 
