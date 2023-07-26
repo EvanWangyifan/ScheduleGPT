@@ -11,9 +11,20 @@
         <main>
             <div class="grid-container">
                 <h1 id="title" class="grid-item">ScheduleGPT</h1>
-                <div id="input-form" class="grid-item">User Input Form Here</div>
+                <form class="form-group">
+                    <span class = "form-item"> Add Your Task: </span>
+                    <input type = "text" class = "form-item" placeholder = "task1" />
+                    <input type = "text" class = "form-item" placeholder = "task2" />
+                    <input type = "text" class = "form-item" placeholder = "task3" />
+                    <input type = "text" class = "form-item" placeholder = "task4" />
+                    <button class = "form-item"> Add </button>
+                    <button class = "form-item"> Generate </button>
+                </form>           
                 <div id="calendar-preview" class="grid-item">Calendar Preview Here</div>
-                <div id="chat-box" class="grid-item">Chat Box Here</div>
+                <div id="chat-box" class="grid-item">
+                    <input type = "text" id = "chat-box-item" placeholder = "Describe any changes you want to make" />
+                    <img id='enter-button' src="images/icons8-enter-48.png">
+                </div>
             </div>
         </main>
         <footer>

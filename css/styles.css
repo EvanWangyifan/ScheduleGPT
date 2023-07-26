@@ -1,8 +1,12 @@
+body{
+    background-color: rgb(219, 219, 219);
+}
+
 .grid-container {
     display: grid;
     position: absolute;
-    grid-template-columns: 45% 55%; 
-    grid-template-rows: 10% 80% 10%; 
+    grid-template-columns: 50% 50%; 
+    grid-template-rows: 10% 80% 10%;
     width: 98vw;
     height: 98vh;
     justify-items: center;
@@ -15,10 +19,60 @@
     /* margin: 1vh; */
 }
 
-#input-form{
+.form-group{
     grid-row: 2 / span 1;
     grid-column: 1 / span 1;
+    gap: 3px 0px;
+}
+
+form{
+    width: 90%;
+}
+
+.form-item {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    justify-content: center;
+    /* display: block; */
+}
+
+
+#chat-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 45px;
+    border-radius: 40px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+#chat-box-item {
+    position: absolute;
+    top: 24%;
+    left: 5%;
+    align-items: center;
+    font-size: 14px;
+    background: none;
+    color: #5a6674;
+    width: 90%;
+    height: 20px;
+    border: none;
+    appearance: none;
+    outline: none;
     
+}
+
+#enter-button {
+    position: relative;
+    height: 70%;
+    top: 15%;
+    float: right;
+    right: 15px;
 }
 
 #calendar-preview{
