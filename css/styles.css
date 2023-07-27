@@ -5,7 +5,7 @@ body{
 .grid-container {
     display: grid;
     position: absolute;
-    grid-template-columns: 52% 1% 47%; 
+    grid-template-columns: 47% 1% 52%; 
     grid-template-rows: 10% 80% 10%;
     width: 98vw;
     height: 98vh;
@@ -41,7 +41,7 @@ form{
     border-style: None;
     box-shadow: 0 2px 5px rgba(45, 44, 44, 0.15);
     background: #fff;
-    margin: 5px;
+    margin: 7px;
     left: 20px;
 }
 
