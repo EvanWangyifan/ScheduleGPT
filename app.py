@@ -1,5 +1,5 @@
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import os
 import openai
 
@@ -9,6 +9,12 @@ app = Flask(__name__)
 def test(password, input_tasks):
    split_tasks = request.args.getlist('task')
    return jsonify({'password': password, 'input_tasks':split_tasks})
+
+@app.route('/')
+def homepage():
+   return "helloworld"
+   # return render_template('index.html')
+
 
 #http://127.0.0.1:5000/get_schedule/123456/input_tasks?task=a&task=b 
 
@@ -84,4 +90,4 @@ def test(password, input_tasks):
 #    return reply
  
 if __name__ == '__main__':
-   app.run()
+   app.run(debug=True)
