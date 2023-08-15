@@ -4,7 +4,6 @@ import os
 import openai
 
 app = Flask(__name__)
-server = app.server
 
 @app.route('/get_schedule/<password>/<input_tasks>')
 def test(password, input_tasks):
