@@ -10,12 +10,5 @@ Contributor: Yifan(Evan) Wang, Chuheng(Kevin) Yu
 **You're able to use natural language (any) to describe your tasks as detailed or vague as you wish. ScheduleGPT will generate a weekly schedule (preview & exportable) that meets your descriptions and is able to use some common sense.**
 
 ## Get Started:
-
-**install OpenAI API:**
-
-```shell
-pip install openai # OR npm install openai
-```
-
 **Authentication:**
 
