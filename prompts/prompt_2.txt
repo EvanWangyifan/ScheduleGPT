@@ -54,3 +54,6 @@ Instructions & Requirements:
 4. Assign the tasks to the same/repeating task_id if they are the same, otherwise assign a unique task_id with positive number. 
 5. If possible, try to allocate tasks evenly so that most of the day have some task instead of some days are overloaded some days are empty with plan.
 '''
+
+
+Here's the input task descriptions:
