@@ -1,4 +1,5 @@
 #  <img src="images/icons8-timeline-64.png" width="22" /> ScheduleGPT
+Contributor: Yifan(Evan) Wang, Chuheng(Kevin) Yu
 
 ## A conversational schedule generator based on GPT-4
 
@@ -18,4 +19,3 @@ pip install openai # OR npm install openai
 
 **Authentication:**
 
-**Hi
