@@ -29,8 +29,9 @@ def chat_completion(password, input_tasks):
    
    with open("prompts/prompt_2.txt","r") as f:
       customized_prompt = f.read()
-   
-   for task in input_tasks:
+      
+   split_tasks = request.args.getlist('task')
+   for task in split_tasks:
       customized_prompt += " - "+task + "\n"
 
    messages.append({"role":"user", "content":customized_prompt})
