@@ -5,10 +5,10 @@ import openai
 
 app = Flask(__name__)
 
-@app.route('/get_schedule/<password>/<input_tasks>')
-def test(password, input_tasks):
-   split_tasks = request.args.getlist('task')
-   return jsonify({'password': password, 'input_tasks':split_tasks})
+# @app.route('/get_schedule')
+# def test(password, input_tasks):
+#    split_tasks = request.args.getlist('task')
+#    return jsonify({'password': password, 'input_tasks':split_tasks})
 
 @app.route('/')
 def homepage():
@@ -18,7 +18,7 @@ def homepage():
 
 #http://127.0.0.1:5000/get_schedule/123456/input_tasks?task=a&task=b 
 
-@app.route('/get_schedule')
+@app.route('/get_schedule/<password>/<input_tasks>')
 def chat_completion(password, input_tasks):
    openai.api_key = password
    
