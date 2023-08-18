@@ -20,6 +20,7 @@ def homepage():
 
 @app.route('/get_schedule/<password>/<input_tasks>')
 def chat_completion(password, input_tasks):
+   return "hello world"
    openai.api_key = password
    
    messages = []
