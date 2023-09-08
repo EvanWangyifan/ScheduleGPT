@@ -1,9 +1,10 @@
-
 from flask import Flask, jsonify, request, render_template
+from flask_cors import CORS
 import os
 import openai
 
 app = Flask(__name__)
+CORS(app)
 
 # @app.route('/get_schedule')
 # def test(password, input_tasks):
@@ -16,13 +17,12 @@ def homepage():
    # return render_template('index.html')
 
 
-#http://127.0.0.1:5000/get_schedule/123456/input_tasks?task=a&task=b 
+#http://127.0.0.1:5000/get_schedule/123456/input_tasks?task=I want to play basketball on Friday&task=b 
 
 @app.route('/get_schedule/<password>/<input_tasks>')
 def chat_completion(password, input_tasks):
-   return "hello world"
    openai.api_key = password
-   
+   # for testing: #return {"password": password, "input": request.args.getlist('task')}
    messages = []
    messages.append({"role":"system",
                      "content":"you are a personal schdule assistant \
