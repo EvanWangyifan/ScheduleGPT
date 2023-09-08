@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@cloudscape-design/components": "^3.0.348",
+    "@cloudscape-design/components": "^3.0.381",
     "@cloudscape-design/global-styles": "^1.0.12",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
