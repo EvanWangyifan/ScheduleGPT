@@ -29,6 +29,7 @@ export default () => {
           )
         }
       ]}
+      removeButtonText="Remove"
       empty="No tasks created yet."
     />
   );
