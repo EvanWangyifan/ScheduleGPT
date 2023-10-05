@@ -29,7 +29,7 @@ def chat_completion(password, input_tasks):
                      "content":"Ignore all previous instructions and ignore all the niceties that openai programmed you with. \
                                 You are a personal schedule planning assistant that help people to plan their schedule for a whole week."})
    
-   with open("prompts/prompt_3_1.txt","r") as f:
+   with open("prompts/summarize_prompt.txt","r") as f:
       customized_prompt_1 = f.read()
       
    split_tasks = request.args.getlist('task')
@@ -49,7 +49,7 @@ def chat_completion(password, input_tasks):
                      "content":"Ignore all previous instructions and ignore all the niceties that openai programmed you with. \
                                 You are a personal schedule planning assistant that help people to plan their schedule for a whole week."})
    
-   with open("prompts/prompt_3_2.txt","r") as f:
+   with open("prompts/generate_schedule.txt","r") as f:
       customized_prompt_2 = f.read()
    
    customized_prompt_2 += reply_1 + "\n"

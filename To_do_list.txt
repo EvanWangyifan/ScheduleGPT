@@ -1,0 +1,17 @@
+
+- Deploy the code
+	- visualize the backend code
+
+- Check the json output format
+	- edit if its needed
+
+- Ask tyz hot to get the current schedule output to edit/add/remove
+
+
+
+
+- Update schedule function
+
+- Add api key user input box
+
+- Add another chat input box for schdule update

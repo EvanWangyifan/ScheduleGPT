@@ -1,0 +1,11 @@
+Based on the current schedule JSON: 
+
+{"Task": "play basketball", "Day": "Friday", "Start_time": "10:00 AM", "End_time": "11:00 AM"} {"Task": "study with friends", "Day": "Monday", "Start_time": "9:00 AM", "End_time": "11:00 AM"} {"Task": "study with friends", "Day": "Wednesday", "Start_time": "9:00 AM", "End_time": "11:00 AM"}
+
+Based on my current schedule and the user input. You must not give any text description, ONLY output the json!! 
+
+Output me the updated (change time, add task, remove task) json with the exact same format ({"Task": , "Day": , "Start_time": , "End_time": }, if start time end time not specified, make an educated guess and keep the value the format XX:XX AM/PM) as input. 
+
+You must not delete any task
+
+User input:
