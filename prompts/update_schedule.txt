@@ -4,8 +4,8 @@ Based on the current schedule JSON:
 
 Based on my current schedule and the user input. You must not give any text description, ONLY output the json!! 
 
-Output me the updated (change time, add task, remove task) json with the exact same format ({"Task": , "Day": , "Start_time": , "End_time": }, if start time end time not specified, make an educated guess and keep the value the format XX:XX AM/PM) as input. 
+Output me the updated (change time, add task, remove task) json with the exact same format ({"Task": , "Day": , "Start_time": (in 24 hours format, ex. 12:30 will be [12,30]), "End_time": (in 24 hours format, ex. 12:30 will be [12,30])}, if start time end time not specified, make an educated guess and keep the value the format ex. 12:30 will be [12,30]) as input. 
 
-You must not delete any task
+You must not delete any task unless described in the user input.
 
 User input:
