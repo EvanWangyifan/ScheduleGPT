@@ -102,9 +102,9 @@ def get_time():
    # {'Monday': [2023, 10, 30], 'Tuesday': [2023, 10, 31], 'Wednesday': [2023, 11, 1], 'Thursday': [2023, 11, 2], 'Friday': [2023, 11, 3], 'Saturday': [2023, 11, 4], 'Sunday': [2023, 11, 5]}
  
 if __name__ == '__main__':
-   # app.run(debug=True)
-   a = get_time()
-   print(a)
+   app.run(debug=True)
+   # a = get_time()
+   # print(a)
    
 #Example Inout:
 # Haircut on Monday at 11 am
