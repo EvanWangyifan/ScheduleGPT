@@ -13,7 +13,7 @@ You must not delete any task from the input.
 
 Make sure all the tasks from the input json are included. And make sure there are no "TBD" value left anywhere in the output.
 
-ONLY output the json with the format as below. Make sure that no other words are in the output:
+ONLY output the json with the format as below (list of dictionary). Make sure that no other words are in the output:
  {"Task":xx, "Day": xx, "Start_time":xx (in 24 hours format, ex. 12:30 will be [12,30]), "End_time":xx (in 24 hours format, ex. 12:30 will be [12,30])}
 
 Input:
