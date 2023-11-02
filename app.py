@@ -2,6 +2,8 @@ from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 import os
 import openai
+import datetime
+import json
 
 # deploy flask
 app = Flask(__name__)
@@ -59,11 +61,50 @@ def chat_completion(password, input_tasks):
    
    response = openai.ChatCompletion.create(model=model, messages=messages_2, temperature=0)
    reply_2 = response["choices"][0]["message"]["content"]
-      
-   return reply_2
+   
+   #load current datetime
+   current_week = get_time()
+
+   tasks = json.loads(reply_2)
+   for task in tasks:
+      if task["Day"] in current_week:
+         task["Start_time"] = current_week[task["Day"]] + task["Start_time"]
+         task["End_time"] = current_week[task["Day"]] + task["End_time"]
+   
+   return tasks
+
+#get time function
+def get_time():
+   #get the current time and day of the week
+   current_time = datetime.datetime.now()
+   today_weekday = current_time.weekday()
+   
+   week_dict = {}
+   
+   for i in range(7):
+      # Calculate the timedelta to subtract from the current date 
+      day_delta = datetime.timedelta(days=i - today_weekday)
+      # Calculate the date for the current weekday
+      weekday_date = current_time + day_delta
+      # Find the weekday name
+      weekday_name = weekday_date.strftime('%A')
+      # find year
+      year = int(weekday_date.strftime('%Y'))
+      # find month
+      month = int(weekday_date.strftime('%m'))
+      # find day
+      day = int(weekday_date.strftime('%d'))
+      # Add to dictionary
+      week_dict[weekday_name] = [year, month, day]
+   
+   return week_dict
+   # return example:
+   # {'Monday': [2023, 10, 30], 'Tuesday': [2023, 10, 31], 'Wednesday': [2023, 11, 1], 'Thursday': [2023, 11, 2], 'Friday': [2023, 11, 3], 'Saturday': [2023, 11, 4], 'Sunday': [2023, 11, 5]}
  
 if __name__ == '__main__':
-   app.run(debug=True)
+   # app.run(debug=True)
+   a = get_time()
+   print(a)
    
 #Example Inout:
 # Haircut on Monday at 11 am
