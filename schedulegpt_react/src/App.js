@@ -1,11 +1,13 @@
 // React
 import * as React from "react";
+import { useState, useEffect } from 'react';
 // AWS Cloudscape
 import ContentLayout from "@cloudscape-design/components/content-layout";
 import Container from "@cloudscape-design/components/container";
 import Header from "@cloudscape-design/components/header";
 import SpaceBetween from "@cloudscape-design/components/space-between";
 import Button from "@cloudscape-design/components/button";
+import Input from "@cloudscape-design/components/input";
 // ./components
 import TaskAttribtueEditor from "./components/attribute_editor";
 import Calendar from "./components/calendar";
@@ -43,6 +45,19 @@ export default () => {
     end: new Date(2023, 8, 19, 20, 30, 3),
   }]);
 
+  const [APIkey, setAPIKey] = React.useState("");
+
+  useEffect(() => {
+    // POST request using fetch inside useEffect React hook
+    const requestOptions = {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
+    };
+    fetch('https://schedulegpt.onrender.com/', requestOptions)
+        .then(response => response.json())
+        .then(data => console.log(data));
+  }, []);
+
   return (
     <ContentLayout
       header={
@@ -58,6 +73,22 @@ export default () => {
     >
 
       <SpaceBetween size="m">
+        <Container
+            header={
+              <Header
+                variant="h2"
+                description="Please enter your OpenAI API Key"
+              >
+                OpenAI API
+              </Header>
+            }
+          >
+            <Input
+              onChange={({ detail }) => setAPIKey(detail.value)}
+              value={APIkey}
+            />
+          </Container>
+
           <Container
             header={
               <Header
@@ -73,6 +104,7 @@ export default () => {
               <Button variant="primary">Generate Schedule</Button>
             </SpaceBetween>
           </Container>
+
           <Container
             header={
               <Header
@@ -87,6 +119,7 @@ export default () => {
               myEventsList={myEvents}
             />
           </Container>
+
       </SpaceBetween>
     </ContentLayout>
   );
